@@ -1,0 +1,213 @@
+*{
+    margin:0;
+    padding:0; 
+    box-sizing:border-box;
+}
+body{
+    width: 100%;
+  background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+.container{  
+padding: 10px;
+overflow-x: hidden;
+min-height: 100vh;
+}
+
+#navlist{
+list-style: none;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-family:'Times New Roman', Times, serif;
+text-shadow: 5px 5px 1px black;
+
+}
+.navContainer{
+    border-bottom:2px solid whitesmoke;
+    min-height: 120px;
+    padding:15px;
+    width:auto;
+   }
+#navItem{
+    display: flex;
+    gap: 25px;
+}
+a{
+    color: rgb(222, 215, 199);
+    font-size: 45px;
+    text-decoration: none;
+}
+h1{
+    color:wheat;
+    font-size: 80px;
+}
+
+h2{
+     color: rgb(210, 202, 184);
+     font-size: 60px;
+     text-shadow: 5px 5px 1px black;
+}
+
+.content{
+    position: relative;
+    margin: auto;
+}
+.content1:hover{
+transform: scale(1.2);
+}
+section{
+    /* width: 70%; */
+    border-top:1px  solid whitesmoke;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content1{
+box-shadow: 4px 5px 5px 4px black;
+margin: 20px;
+padding: 20px;
+display: flex;
+justify-content: space-between;
+border-radius: 10px; 
+background: #d9a7c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: all 1s linear 0.1s;
+}
+.content2{
+box-shadow: 4px 5px 5px 4px black;
+margin: 20px;
+padding: 20px;
+display: flex;
+justify-content: space-between;
+border-radius: 10px; 
+background: #d9a7c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ transition: all 1s linear 0.1s;
+}
+.content2:hover{
+transform: scale(1.2);
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+h3{
+   font-size: 70px;   
+}
+summary{
+ font-size: 3rem;   
+}
+#one,#two{
+    border-radius:50px;
+}
+.windows{
+    
+    position: relative;
+    height:400px;
+    top: 70px;
+    width: 80%;
+    margin:  auto;
+    overflow: hidden; /* Hides the rest of the train */
+    border-radius: 15px;
+
+}
+.train{
+    display: flex;
+    overflow-x: auto; /* Allows sliding */
+    scroll-behavior: smooth; /* Makes it slide like a movie site */
+    scroll-snap-type: x mandatory; /* Forces images to "click" into place */
+    gap: 10px;
+}
+.train img{
+    height: 400px;
+    width:400px;
+}
+#about{
+ border-top: 2px solid whitesmoke; 
+ margin: 10px;  
+}
+#about p{
+    line-height: 3.5rem;
+    font-size:2rem;
+    color: rgb(230, 225, 217);
+}
+footer {
+    background-color: #002b36; /* Your Deep Teal */
+    padding: 40px 20px;
+    border-top: 1px solid wheat; /* That horizontal line you wanted! */
+    color: wheat;
+    text-align: center;
+}
+
+#footerBox {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    gap: 20px;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+}
+
+.social-links a {
+    color: wheat;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffd5b8; /* Glow effect on hover */
+    text-decoration: underline;
+}
+
+.copyright p {
+    font-size: 12px;
+    opacity: 0.8; /* Makes the copyright slightly subtle */
+    margin-top: 10px;
+}
+
+@media(max-width:1050px){
+    #navlist{
+        flex-direction: column;
+
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.5rem; }
+    a { font-size: 1rem; }
+    #about p { font-size: 1rem; }
+    summary { font-size: 1rem; }
+
+    .content1, .content2 {
+        flex-direction: column; /* Stacks the image and text vertically */
+        align-items: center;
+        width: 300px;
+        height: 300px;
+        padding: 2px;
+    }
+    .content1 img, .content2 img{
+        height: 200px;
+        width: 200px;
+    }
+
+    .windows {
+        position: relative;
+        top: 1rem;
+       height: 300px; /* Shorter height for mobile screens */
+        width: 280px;
+    }
+    
+}
